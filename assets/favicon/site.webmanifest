@@ -1,0 +1,26 @@
+{
+  "name": "Qiskit Fall Fest 2025 – University of Stuttgart",
+  "short_name": "Qiskit Fall Fest 2025",
+  "lang": "en",
+  "description": "Three-day quantum computing event in Stuttgart with talks, workshops, and a hackathon.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#343a3e",
+  "background_color": "#343a3e",
+  "icons": [
+    {
+      "src": "/assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "events", "technology"]
+}
