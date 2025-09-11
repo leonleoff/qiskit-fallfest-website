@@ -5,10 +5,10 @@
   /* Colors */
   --primary-color: #ffcd42;
   --secondary-color: #ffd35c;
-  --bg-primary: #ffffff;
-  --text-color: #222222;
-  --bg-secondary: #000000;
-  --card-background: #620e0e;
+  --bg-primary: #343a3e;
+  --text-color: #ffffff;
+  --bg-secondary: #ff7eb6;
+  --card-background: #ff7eb6;
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
@@ -96,6 +96,102 @@ body {
   margin-left: 0.5rem;
   font-size: 0.9rem;
 }
+
+/* about event */
+.container {
+  display: flex;
+  align-items: center;          /* vertikal zentrieren */
+  justify-content: space-between; /* Grafiken am Rand, Box in der Mitte */
+  padding: 0 40px;              /* Abstand zu den Rändern */
+  margin: 60px 0;
+}
+
+.info-box {
+  background-color: #21272a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: "Raleway", sans-serif;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.side-graphic {
+  width: 100px;      /* Bildgröße anpassen */
+  height: auto;
+}
+
+/* schedule */
+
+.schedule {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.day {
+  background: #21272a;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.day h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #ff7eb6;
+}
+
+.day ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.day li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.day li:hover {
+  background: #ff7eb6;
+}
+
+.time {
+  font-weight: bold;
+  color: #ffffff;
+  min-width: 60px;
+  display: inline-block;
+}
+
+.schedule-header {
+  display: flex;
+  gap: 10px; /* Abstand zwischen Icon und Text */
+}
+
+.day-icon {
+  width: 100px; /* Größe anpassen */
+  height: 100px;
+}
+
 
 /* hamburger */
 .hamburger {
