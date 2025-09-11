@@ -98,7 +98,7 @@ body {
 }
 
 /* about event */
-.container {
+.anietta-container {
   display: flex;
   align-items: center;          /* vertikal zentrieren */
   justify-content: space-between; /* Grafiken am Rand, Box in der Mitte */
@@ -109,6 +109,7 @@ body {
 .info-box {
   background-color: #21272a;
   color: #ffffff;
+  margin-inline: auto;
   padding: 20px;
   border-radius: 15px;
   width: 400px;
@@ -303,6 +304,8 @@ body {
     border-radius: 5px;
     align-items: flex-start;
   }
+
+  .hide-on-hamburger { display: none !important; }
 
   .navbar .btn {
     margin: 0;
