@@ -49,6 +49,7 @@
             <li><a class="nav-link" href="#about">ABOUT</a></li>
             <li><a class="nav-link" href="#schedule">SCHEDULE</a></li>
             <li><a class="nav-link" href="#aboutus">ABOUT US</a></li>
+            <li><a class="nav-link" href="#partners">PARTNERS</a></li>
             <li><a class="nav-link" href="#contact">CONTACT</a></li>
             
             <!-- Hamburger menu -->
@@ -77,12 +78,14 @@
           <p>Join us for an exciting lineup of talks, hands-on workshops, and hackathon challenges designed for both curious beginners and intermediate quantum enthusiasts. <br>
           Learn new skills, collaborate with peers, and connect with Baden-Württemberg's growing quantum community!</p>
         </div>
-        <a
+
+        <p style="color: #ff7eb6;"> <strong>Registration opens in the beginning of October!</strong></p>
+        <!-- <a
           href="https://unsere-regestrierung"
           class="btn btn-secondary"
           target="_blank"
           >Register</a
-        >
+        > -->
       </section>
     </header>
 
@@ -110,7 +113,7 @@
           <img src="assets/Atom-02.png" alt="Right Graphic" class="side-graphic hide-on-hamburger">
         </div>
 
-         <a href="https://unser-flyer" class="btn btn-secondary"
+         <a href="assets/flyer/Qiskit_Fall_Fest_2025.pdf" class="btn btn-secondary"
         target="_blank" >Get our flyer<i class="fas fa-arrow-right"></i
       ></a>
     </section>
@@ -120,9 +123,11 @@
     <section id="schedule" class=" textsection anietta-container">
       <div class="division"></div>
       <div class="content-text">
-        <h2>Schedule</h2>
+        <h2>Preliminary Schedule</h2>
         <p>We offer a variety of talks, workshops, and hackathon challenges for <strong>students of all levels </strong> — from curious minds eager to explore quantum concepts, to beginners and those with intermediate experience. Check out the schedule and <strong>register </strong> for the events that interest you. We can't wait to see you there! </p>
         
+        <p style="color: #ff7eb6;"> <strong>More details regarding the schedule will follow soon!</strong></p>
+
         <section class="schedule">
           <div class="day">
             <div class="schedule-header">
@@ -166,6 +171,87 @@
           </div>
         </section>
         </section>
+
+         <!-- Partners -->
+         <section id="partners" class="container textsection">
+          <div class="division"></div>
+          <div class="content-text">
+            <h2>Partners</h2>
+          </div>
+
+          <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="assets/logo/IBM_quantum.png" style="width:70%">
+    <div class="text">IBM Quantum offers access to the world's largest quantum computer fleet and powerful Qiskit software to explore and scale quantum advantage.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="assets/logo/IQST.png" style="width:70%">
+    <div class="text">IQST unites science and engineering to advance quantum research and develop innovative technologies at multiple institutions around Baden-Württemberg.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="assets/logo/SfT.png" style="width:70%">
+    <div class="text">The School for Talents empowers outstanding students at the University of Stuttgart to deepen expertise, connect across disciplines, and tackle societal challenges.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="assets/logo/Uni_Stuttgart.png" style="width:70%">
+    <div class="text">The University of Stuttgart pioneers quantum technologies, collaborating worldwide within Baden-Württemberg's strong quantum ecosystem.</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+</section>
+
+<script>
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+         
+        
     
         <!-- About us -->
     <section id="aboutus" class="container textsection ">
@@ -173,6 +259,16 @@
       <div class="content-text">
         <h2>About us</h2>
         <p>We are an interdisciplinary and international team of five students from the <strong> University of Stuttgart</strong>, curious about quantum computing and dedicated to connecting students, industry, and scientists. Our event is proudly supported by the <strong>School for Talents</strong> and <strong>IBM Quantum</strong>. We look forward to welcoming you — and if you have any questions or collaboration ideas, don't hesitate to reach out! </p>
+
+        
+        <div class="info-box-2">
+          <div class="info-item"><strong>Afonso Azenha: PhD student at IQST</strong> - <a href="https://www.linkedin.com/in/afonso-azenha/" target="_blank">LinkedIn</a></div>
+          <div class="info-item"><strong>Meri Ghulyan: chemical and bioengineering student</strong> - <a href="https://www.linkedin.com/in/meri-ghulyan-4a50a7222/" target="_blank">LinkedIn</a></div>
+          <div class="info-item"><strong>Leon Layer: software engineering student</strong> - <a href="https://www.linkedin.com/in/leon-layer-7562a235a/" target="_blank">LinkedIn</a></div>
+          <div class="info-item"><strong>Victoria Freiin von Schlotheim: engineering cybernetics student</strong> - <a href="https://www.linkedin.com/in/victoria-freiin-von-schlotheim-225428380/" target="_blank">LinkedIn</a></div>
+            <div class="info-item"><strong>Anietta Weckauff: computer science student</strong> - <a href="https://www.linkedin.com/in/anietta-weckauff/" target="_blank">LinkedIn</a></div>
+        </div>
+       
       </div>
     </section>
 
