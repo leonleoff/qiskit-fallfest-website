@@ -195,11 +195,40 @@ body {
   background: #ff7eb6;
 }
 
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.event-title {
+  text-align: left;
+  font-weight: 500;
+}
+
+.speaker-info {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
 .time {
   font-weight: bold;
   color: #ffffff;
   min-width: 60px;
   display: inline-block;
+}
+
+/* Speaker links styling */
+.schedule a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.schedule a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .schedule-header {
