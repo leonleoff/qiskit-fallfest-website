@@ -199,6 +199,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .event-title {
