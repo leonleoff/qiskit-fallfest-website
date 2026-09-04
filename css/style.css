@@ -877,3 +877,44 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Team avatars */
+.team-card {
+  align-items: center;
+  text-align: center;
+}
+
+.team-avatar {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-color), var(--bg-secondary));
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.4rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  flex: none;
+}
+
+/* Initials fallback shown when no photo file is present */
+.team-avatar::before {
+  content: attr(data-initials);
+  font-weight: var(--weight-bold);
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  color: #21272a;
+}
+
+.team-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-link {
+  align-self: center;
+}
