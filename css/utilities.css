@@ -85,3 +85,19 @@ h2::selection {
     font-size: 2.5rem;
   }
 }
+/* Paused registration */
+.btn-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.registration-notice {
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  text-align: center;
+}
+
+.registration-notice p {
+  margin: 0.25rem 0;
+}
