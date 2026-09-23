@@ -85,29 +85,3 @@ h2::selection {
     font-size: 2.5rem;
   }
 }
-/* Paused registration */
-.btn-disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.registration-notice {
-  max-width: 40rem;
-  margin: 1rem auto 0;
-  text-align: center;
-}
-
-.registration-notice p {
-  margin: 0.25rem 0;
-}
-
-/* Archive of past editions */
-#footer .past-editions {
-  margin-top: 0.6rem;
-  font-size: 0.8rem;
-}
-
-#footer .past-editions a {
-  text-decoration: underline;
-}

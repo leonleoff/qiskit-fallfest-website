@@ -1,0 +1,70 @@
+/* Styling that belongs to the archive wrapper only.
+   style.css and utilities.css are kept as an untouched snapshot of the
+   2025 site, so every archive-specific rule lives here. */
+
+:root {
+  /* Kept in sync with the real banner height by js/archive.js. */
+  --archive-banner-height: 44px;
+}
+
+.archive-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: var(--primary-color);
+  color: #111;
+  font-size: 0.8rem;
+  font-weight: var(--weight-semibold);
+  text-align: center;
+  padding: 0.7rem 1rem;
+}
+
+.archive-banner a {
+  color: #111;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.archive-banner a:hover {
+  opacity: 0.7;
+}
+
+/* Push the (fixed) navbar and the hero below the banner. */
+.navbar {
+  top: var(--archive-banner-height);
+}
+
+.header-container {
+  margin-top: calc(8rem + var(--archive-banner-height));
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    margin-top: calc(7rem + var(--archive-banner-height));
+  }
+}
+
+/* The mobile menu drops in from under the navbar (breakpoint from style.css). */
+@media (max-width: 670px) {
+  .navbar .nav-menu {
+    top: calc(4.5rem + var(--archive-banner-height));
+  }
+}
+
+/* Registration for 2025 is long closed. */
+.btn-archived {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+#footer .archive-footer-note {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+}
+
+#footer .archive-footer-note a {
+  text-decoration: underline;
+}
