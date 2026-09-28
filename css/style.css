@@ -716,13 +716,23 @@ body {
   height: 72px;
 }
 
-.day h2 {
-  font-size: 1.05rem;
+/* .schedule prefix: outranks `.content-text h2` in utilities.css, which loads later */
+.schedule .day h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
   letter-spacing: 0.01em;
+}
+
+.schedule .day-location {
+  margin: -0.5rem auto 1rem;
+  padding: 0;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .day li {
   align-items: baseline;
+  text-align: left;
   border: 1px solid transparent;
   color: var(--muted);
   margin-bottom: 0.35rem;
