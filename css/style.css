@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
 
 /* variables */
 :root {
@@ -927,4 +927,260 @@ body {
 
 .team-link {
   align-self: center;
+}
+
+/* =========================================================
+   2026 theme: "10 years of quantum on the cloud"
+   Type, colours and stickers follow IBM's Fall Fest 2026 kit
+   (assets/2026, matching the printed flyer).
+   ========================================================= */
+
+:root {
+  --pill-purple: #a56eff;
+  --pill-pink: #ff7eb6;
+  --pill-blue: #d0e2ff;
+  --accent-blue: #78a9ff;
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+}
+
+body,
+.info-box,
+.info-box-2 {
+  font-family: var(--font-sans);
+}
+
+/* Hero: flyer-style pill wordmark with floating stickers */
+.header-container {
+  position: relative;
+}
+
+.header-container > .hero-stickers {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.hero-sticker {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.hero-sticker--qubits {
+  top: 4%;
+  left: max(16px, calc(50% - 540px));
+  width: 120px;
+  transform: rotate(-8deg);
+}
+
+.hero-sticker--wave {
+  top: 0;
+  right: max(16px, calc(50% - 530px));
+  width: 105px;
+  transform: rotate(8deg);
+}
+
+.hero-sticker--bird {
+  top: 42%;
+  left: max(8px, calc(50% - 580px));
+  width: 160px;
+}
+
+.hero-sticker--eagle {
+  top: 48%;
+  right: max(8px, calc(50% - 590px));
+  width: 190px;
+}
+
+.content-text .pill-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 0.8rem;
+  margin: 1rem 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.3em 0.75em;
+  border-radius: 999px;
+  color: #161616;
+}
+
+.pill--purple {
+  background: var(--pill-purple);
+}
+
+.pill--pink {
+  background: var(--pill-pink);
+}
+
+.pill--blue {
+  background: var(--pill-blue);
+}
+
+.content-text .theme-line {
+  color: var(--text-color);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+}
+
+/* About: anniversary card with the bird illustration */
+.theme-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 2rem;
+  align-items: center;
+  max-width: var(--width-medium);
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.theme-card-text {
+  padding-left: 0.5rem;
+}
+
+.content-text .theme-card-text p {
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.theme-card-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.info-item:nth-child(1) strong {
+  color: var(--pill-pink);
+}
+
+.info-item:nth-child(2) strong {
+  color: var(--pill-purple);
+}
+
+.info-item:nth-child(3) strong {
+  color: var(--accent-blue);
+}
+
+.side-graphic {
+  width: clamp(80px, 12vw, 150px);
+  opacity: 1;
+}
+
+/* Schedule: bird stickers and a separate date line */
+.day-icon {
+  width: 88px;
+  height: 88px;
+}
+
+.schedule .day-date {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+/* Footer: cloud skyline and the Fall Fest badge */
+#footer {
+  position: relative;
+  margin-top: 140px;
+  border-top: 0;
+}
+
+.footer-clouds {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% - 1px);
+  height: 140px;
+  background: #16191b;
+  --clouds:
+    url(../assets/2026/cloud.svg) 3% 100% / 340px auto no-repeat,
+    url(../assets/2026/cloud.svg) 36% 100% / 240px auto no-repeat,
+    url(../assets/2026/cloud.svg) 74% 100% / 420px auto no-repeat,
+    url(../assets/2026/cloud.svg) 102% 100% / 280px auto no-repeat,
+    linear-gradient(#000 0 0) 0 100% / 100% 16px no-repeat;
+  -webkit-mask: var(--clouds);
+  mask: var(--clouds);
+}
+
+#footer .container {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer-badge {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1rem;
+}
+
+/* Partners: every slide shares one grid cell, so the card always takes the
+   height of the tallest slide; logos sit in a fixed-size box */
+.slideshow-container {
+  display: grid;
+}
+
+.mySlides {
+  display: block;
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+
+.mySlides.is-active {
+  visibility: visible;
+}
+
+.mySlides:not(.is-active) {
+  animation: none;
+}
+
+.mySlides img {
+  width: min(80%, 340px) !important;
+  height: 96px;
+  object-fit: contain;
+}
+
+/* Bare wordmarks look heavier than the white logo tiles at the same size;
+   shrink them while keeping the same 96px of vertical space */
+.mySlides img.logo-wordmark {
+  height: 64px;
+  margin-block: 16px;
+}
+
+@media (max-width: 1100px) {
+  .hero-stickers {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .theme-card {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-card-text {
+    padding-left: 0;
+  }
 }
