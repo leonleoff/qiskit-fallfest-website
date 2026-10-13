@@ -92,10 +92,13 @@
       </div>
 
       <div class="registration-notice">
-        <p><strong>Registration opens in early October 2026.</strong></p>
+        <p><strong data-registration="closed">Registration opens in early October 2026.</strong><strong
+            data-registration="open" hidden>Registration is open!</strong></p>
         <p>The programme below is preliminary and not yet final.</p>
       </div>
-      <span class="btn btn-secondary btn-disabled" aria-disabled="true">Registration opens soon</span>
+      <!-- Wired up by js/registration.js; stays disabled until REGISTRATION_OPEN is true -->
+      <a id="registration-button" class="btn btn-secondary btn-disabled" aria-disabled="true">Registration opens soon</a>
+      <p class="registration-privacy">By registering you agree to our <a href="privacy/">privacy notice</a>.</p>
     </section>
   </header>
 
@@ -152,7 +155,8 @@
       <p>We offer a variety of talks, workshops, and hackathon challenges for <strong>students of all levels </strong> —
         from curious minds eager to explore quantum concepts, to beginners and those with intermediate experience. Check
         out the preliminary schedule below. <strong>Please note: the programme is not yet final</strong> — times,
-        sessions and speakers may still change. Registration opens in <strong>early October 2026</strong>. We can't
+        sessions and speakers may still change. <span data-registration="closed">Registration opens in <strong>early October 2026</strong>.</span><span
+          data-registration="open" hidden>Registration is open!</span> We can't
         wait to see you there! </p>
       <p>Participants in the Qiskit Fall Fest will receive an IBM Quantum certificate.</p>
 
@@ -493,10 +497,12 @@
     <div class="container">
       <img class="footer-badge" src="assets/2026/badge-pink.svg" alt="" width="96" height="96" />
       <a href="mailto:afonso.azenha@gmail.com">afonso.azenha@gmail.com</a>
+      <p class="footer-privacy"><a href="privacy/">Privacy</a></p>
       <p class="past-editions">Past editions: <a href="/2025/">2025</a></p>
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/registration.js"></script>
 </body>
 
 </html>
