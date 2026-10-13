@@ -3,7 +3,7 @@
 // The hero button then links to the Tally form (new tab) and the
 // "Registration opens ..." texts are swapped for "Registration is open!".
 // While it is false the page looks exactly like before and the form is unreachable.
-const REGISTRATION_OPEN = false;
+const REGISTRATION_OPEN = true;
 const REGISTRATION_URL = "https://tally.so/r/obra9x";
 
 if (REGISTRATION_OPEN) {
