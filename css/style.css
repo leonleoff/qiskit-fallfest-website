@@ -216,7 +216,7 @@ body {
 .time {
   font-weight: bold;
   color: #ffffff;
-  min-width: 60px;
+  min-width: 3.5em;
   display: inline-block;
 }
 
@@ -231,6 +231,19 @@ body {
 .schedule a:hover {
   color: var(--primary-color);
   text-decoration: underline;
+}
+
+/* Links to other sections of this page: styled like body-text links, so they
+   read differently from the speaker links */
+.schedule a.section-link {
+  color: var(--bg-secondary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.schedule a.section-link:hover {
+  color: var(--primary-color);
 }
 
 .schedule-header {
@@ -699,7 +712,7 @@ body {
 
 .day {
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.25rem;
   height: 100%;
 }
 
