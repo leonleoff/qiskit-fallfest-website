@@ -111,3 +111,57 @@ h2::selection {
 #footer .past-editions a {
   text-decoration: underline;
 }
+
+/* Registration privacy hint and footer privacy link */
+.registration-privacy {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.registration-privacy a,
+#footer .footer-privacy a {
+  text-decoration: underline;
+}
+
+#footer .footer-privacy {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+}
+
+/* Privacy page */
+.legal-page {
+  margin-top: 8rem;
+}
+
+.legal-page .content-text {
+  max-width: 62ch;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.legal-page .content-text h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.legal-page .content-text h2:first-of-type {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.legal-page .content-text p {
+  margin: 0;
+  padding: 0.4rem 0;
+}
+
+.legal-page .content-text ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-page .content-text a {
+  text-decoration: underline;
+}
