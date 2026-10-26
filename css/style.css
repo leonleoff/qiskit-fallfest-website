@@ -1284,8 +1284,11 @@ section[id] {
   --vm-accent: var(--pill-pink);
 }
 
+/* minmax(0, 1fr): the 900px-wide phone map must scroll inside its frame
+   instead of stretching the column */
 .location-blocks {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.25rem;
   max-width: var(--width-medium);
   margin: 2.5rem auto 0;
@@ -1376,6 +1379,12 @@ section[id] {
 
   .location-buttons .btn {
     flex: 1 1 9rem;
+  }
+
+  /* the map runs to the card edges so the "Follow the signs" label fits next to the pin */
+  .location-block .vm-scroller {
+    margin-inline: -1rem;
+    border-radius: 0;
   }
 }
 
