@@ -1241,3 +1241,279 @@ section[id] {
     padding-left: 0;
   }
 }
+
+/* About: "How to get there" link in the info box */
+.info-item a {
+  color: var(--pill-pink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.info-item a:hover {
+  color: var(--pill-purple);
+}
+
+/* Schedule: link from each day to its location block */
+.schedule .day-location-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+  color: var(--pill-pink);
+  transition: color 0.2s ease;
+}
+
+.schedule .day-location-link span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.schedule .day-location-link:hover {
+  color: var(--pill-purple);
+}
+
+.schedule .day-location-link:hover span {
+  transform: translateX(4px);
+}
+
+/* Location: one card per venue, the campus card carries the walking map */
+#location {
+  --vm-accent: var(--pill-pink);
+}
+
+/* minmax(0, 1fr): the 900px-wide phone map must scroll inside its frame
+   instead of stretching the column */
+.location-blocks {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  max-width: var(--width-medium);
+  margin: 2.5rem auto 0;
+}
+
+.location-block {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.location-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem 2rem;
+  align-items: start;
+}
+
+.location-eyebrow {
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pill-pink);
+}
+
+.location-title {
+  margin: 0.25rem 0 0.35rem;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.location-meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.location-address {
+  margin-top: 0.35rem;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+.location-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.location-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin: 0;
+}
+
+.location-text p + p {
+  margin-top: 0.75rem;
+}
+
+.location-note {
+  padding-left: 0.75rem;
+  border-left: 2px solid rgba(255, 126, 182, 0.35);
+  font-size: 0.92rem;
+}
+
+.location-block strong {
+  color: var(--text-color);
+}
+
+@media (max-width: 800px) {
+  .location-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 670px) {
+  .location-block {
+    padding: 1.25rem 1rem;
+  }
+
+  .location-buttons .btn {
+    flex: 1 1 9rem;
+  }
+
+  /* the map runs to the card edges so the "Follow the signs" label fits next to the pin */
+  .location-block .vm-scroller {
+    margin-inline: -1rem;
+    border-radius: 0;
+  }
+}
+
+/* Campus map component */
+.vm-figure {
+  --vm-accent: var(--pill-pink);
+  --vm-ink: #f4f4f6;
+  --vm-muted: rgba(244, 244, 246, 0.72);
+  --vm-pill: rgba(16, 16, 22, 0.86);
+  --vm-pill-border: rgba(255, 255, 255, 0.14);
+  --vm-label-size: clamp(11px, 1.05vw, 15px);
+  margin: 1.5rem 0 0;
+}
+.vm-sbahn__icon, .vm-pin__icon { transform-box: fill-box; }
+.vm-sbahn__icon { transform-origin: center; }
+.vm-pin__icon { transform-origin: 50% 100%; }
+
+.vm-scroller {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 16px;
+  background: #0d0e13;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.vm-scroller:focus-visible { outline: 2px solid var(--vm-accent); outline-offset: 3px; }
+.vm-canvas { position: relative; width: 100%; line-height: 0; }
+.vm-image { display: block; width: 100%; height: auto; }
+.vm-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+
+/* animated walking routes: dots move towards the sculpture */
+.vm-route path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.vm-route__casing { stroke: rgba(10, 10, 14, 0.75); stroke-width: 22; }
+.vm-route__line {
+  stroke: var(--vm-accent);
+  stroke-width: 11;
+  stroke-dasharray: 1 23;
+  animation: vm-walk 1.4s linear infinite;
+}
+@keyframes vm-walk { to { stroke-dashoffset: -24; } }
+
+/* S-Bahn logos */
+.vm-sbahn circle { fill: #fff; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5)); }
+
+/* pin at the sculpture with a pulsing ring */
+.vm-pin__body { fill: var(--vm-accent); stroke: #fff; stroke-width: 5; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.55)); }
+.vm-pin__dot { fill: #fff; }
+.vm-pin__shadow { fill: rgba(0, 0, 0, 0.45); }
+.vm-pin__pulse {
+  fill: none; stroke: var(--vm-accent); stroke-width: 5;
+  transform-box: fill-box; transform-origin: center;
+  animation: vm-pulse 1.8s ease-out infinite;
+}
+@keyframes vm-pulse {
+  from { transform: scale(0.4); opacity: 0.9; }
+  to   { transform: scale(2.2); opacity: 0; }
+}
+
+/* labels are HTML so the text stays crisp and readable at every size */
+.vm-label, .vm-tag {
+  position: absolute;
+  left: calc(var(--x) / 2576 * 100%);
+  top: calc(var(--y) / 961 * 100%);
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.vm-label {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 0.45em 0.75em;
+  font-size: var(--vm-label-size);
+  color: var(--vm-ink);
+  background: var(--vm-pill);
+  border: 1px solid var(--vm-pill-border);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.vm-label strong { font-weight: 700; }
+.vm-label span { color: var(--vm-muted); font-size: 0.88em; }
+.vm-label--left       { transform: translate(-100%, -50%); }
+.vm-label--above      { transform: translate(-50%, calc(-100% - 10px)); }
+.vm-label--above-left { transform: translate(-100%, -100%); }
+
+.vm-label--start { border-color: var(--vm-accent); }
+.vm-label--venue { background: var(--vm-accent); border-color: transparent; color: #16070e; }
+.vm-label--venue strong { color: #16070e; }
+.vm-label--venue span { color: rgba(22, 7, 14, 0.78); }
+.vm-label--venue::after {
+  content: ""; position: absolute; left: 50%; bottom: -7px;
+  border: 8px solid transparent; border-bottom: 0; border-top-color: var(--vm-accent);
+  transform: translateX(-50%);
+}
+
+.vm-tag {
+  transform: translate(-50%, -50%);
+  padding: 0.2em 0.55em;
+  font-size: calc(var(--vm-label-size) * 0.85);
+  color: var(--vm-ink);
+  background: rgba(16, 16, 22, 0.62);
+  border-radius: 999px;
+}
+
+.vm-hint { display: none; margin: 0.5rem 0 0; font-size: 0.85rem; opacity: 0.7; }
+.vm-steps { margin: 1rem 0 0; padding-left: 1.25rem; line-height: 1.6; }
+
+/* phones: zoomed so that x 1100 to 2540 of the map (both S-Bahn exits, both routes,
+   pin and venue) fit the screen; the rest of the campus is reachable by swiping */
+@media (max-width: 760px) {
+  .vm-canvas { width: 179%; }
+  .vm-figure { --vm-label-size: 11.5px; }
+  .vm-hint { display: block; }
+  .vm-label--sbahn { display: none; }        /* the S logos speak for themselves, the steps explain the exits */
+  .vm-label--start span { display: none; }
+  .vm-route__casing { stroke-width: 28; }
+  .vm-route__line { stroke-width: 15; }
+  .vm-sbahn__icon, .vm-pin__icon { transform: scale(1.5); }
+}
+
+/* highlight a location block when someone jumps to it from the schedule;
+   100px clears the fixed navbar like the organiser cards above */
+#location-campus, #location-ibm { scroll-margin-top: 100px; }
+#location-campus:target, #location-ibm:target { animation: location-flash 1.8s ease-out 1; }
+@keyframes location-flash {
+  25% { box-shadow: 0 0 0 4px var(--vm-accent), 0 18px 40px rgba(0, 0, 0, 0.28); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vm-route__line, .vm-pin__pulse { animation: none; }
+  .vm-pin__pulse { opacity: 0; }
+  #location-campus:target, #location-ibm:target { animation: none; }
+}
