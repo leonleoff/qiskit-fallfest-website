@@ -343,6 +343,139 @@
     </div>
   </section>
 
+  <!-- Location -->
+  <section id="location" class="container textsection">
+    <div class="division"></div>
+    <div class="content-text">
+      <h2>Location</h2>
+      <p>Where to be, and when.</p>
+    </div>
+
+    <div class="location-blocks">
+      <article id="location-campus" class="location-block">
+        <div class="location-info">
+          <div class="location-head">
+            <p class="location-eyebrow">Days 1 and 2</p>
+            <h3 class="location-title">Campus.Guest, University of Stuttgart</h3>
+            <p class="location-meta">Mon 9 and Tue 10 November &middot; Registration opens at 09:00</p>
+            <address class="location-address">Universitätsstraße 28-34, 70569 Stuttgart (Campus Vaihingen)</address>
+            <div class="location-buttons">
+              <a class="btn btn-secondary"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Campus.Guest%2C%20Universit%C3%A4tsstra%C3%9Fe%2C%2070569%20Stuttgart"
+                target="_blank" rel="noopener">Google Maps</a>
+              <a class="btn btn-secondary"
+                href="https://maps.apple.com/?q=Campus.Guest%2C%20Universit%C3%A4tsstra%C3%9Fe%2C%2070569%20Stuttgart"
+                target="_blank" rel="noopener">Apple Maps</a>
+            </div>
+          </div>
+          <div class="location-text">
+            <p>Take the S-Bahn to Universität and walk to the iron sculpture at the end of the small loop road. From
+              there, Qiskit Fall Fest signs lead you to the venue.</p>
+            <p class="location-note">Day 1 lab visits (15:30 and 17:00) start at a different spot: the blue elevator,
+              3rd floor, Pfaffenwaldring 57.</p>
+          </div>
+        </div>
+
+        <!-- Campus map: overlay coordinates use the 2576 x 961 pixel grid of the image -->
+        <figure class="vm-figure">
+          <div class="vm-scroller" tabindex="0" aria-label="Campus map, scroll sideways on small screens">
+            <div class="vm-canvas">
+              <img
+                class="vm-image"
+                src="assets/2026/map/campus-map-1400.webp"
+                srcset="assets/2026/map/campus-map-1400.webp 1400w, assets/2026/map/campus-map-2576.webp 2576w"
+                sizes="(max-width: 760px) 900px, (max-width: 1400px) 100vw, 1300px"
+                width="2576" height="961" loading="lazy" decoding="async"
+                alt="Illustrated map of Campus Vaihingen. Walking routes lead from both exits of the S-Bahn station Universität to an iron sculpture at the end of a small loop road off Universitätsstraße. The venue Campus.Guest, highlighted in pink, is right next to it.">
+
+              <svg class="vm-overlay" viewBox="0 0 2576 961" aria-hidden="true" focusable="false">
+                <!-- walking routes: from the rotunda exit and from the Universitätsstraße exit to the sculpture -->
+                <g class="vm-route">
+                  <path class="vm-route__casing" d="M1300 395 L1380 412 L1500 424 L1640 428 L1722 424 L1745 405 L1772 388 L1812 381 L1856 387 L1890 402 L1922 404 L1960 402"/>
+                  <path class="vm-route__line"   d="M1300 395 L1380 412 L1500 424 L1640 428 L1722 424 L1745 405 L1772 388 L1812 381 L1856 387 L1890 402 L1922 404 L1960 402"/>
+                </g>
+                <g class="vm-route">
+                  <path class="vm-route__casing" d="M1540 912 L1610 896 L1760 856 L1900 818 L1990 790 L2034 768 L2038 735 L2020 688 L1995 642 L1962 585 L1928 528 L1900 480 L1904 444 L1928 418 L1960 402"/>
+                  <path class="vm-route__line"   d="M1540 912 L1610 896 L1760 856 L1900 818 L1990 790 L2034 768 L2038 735 L2020 688 L1995 642 L1962 585 L1928 528 L1900 480 L1904 444 L1928 418 L1960 402"/>
+                </g>
+
+                <!-- S-Bahn exits -->
+                <g class="vm-sbahn" transform="translate(1261 356)">
+                  <circle r="42"/>
+                  <image href="assets/2026/map/s-bahn.png" x="-36" y="-36" width="72" height="72"/>
+                </g>
+                <g class="vm-sbahn" transform="translate(1540 912)">
+                  <circle r="42"/>
+                  <image href="assets/2026/map/s-bahn.png" x="-36" y="-36" width="72" height="72"/>
+                </g>
+
+                <!-- start of signage: iron sculpture -->
+                <g class="vm-pin" transform="translate(1960 402)">
+                  <ellipse class="vm-pin__pulse" rx="34" ry="14"/>
+                  <ellipse class="vm-pin__shadow" rx="16" ry="6"/>
+                  <path class="vm-pin__body" d="M0 0 C-8 -18 -30 -34 -30 -60 A30 30 0 1 1 30 -60 C30 -34 8 -18 0 0 Z"/>
+                  <circle class="vm-pin__dot" cy="-60" r="11"/>
+                </g>
+              </svg>
+
+              <!-- labels: --x / --y are pixel positions on the 2576 x 961 image -->
+              <div class="vm-label vm-label--left" style="--x:1208; --y:356" aria-hidden="true">
+                <strong>S-Bahn Universität</strong><span>Main exit</span>
+              </div>
+              <div class="vm-label vm-label--left" style="--x:1488; --y:912" aria-hidden="true">
+                <strong>S-Bahn Universität</strong><span>Exit Universitätsstraße</span>
+              </div>
+              <div class="vm-label vm-label--start vm-label--above-left" style="--x:1930; --y:352" aria-hidden="true">
+                <strong>Follow the signs</strong><span>Qiskit Fall Fest signs start here</span>
+              </div>
+              <div class="vm-label vm-label--venue vm-label--above" style="--x:2300; --y:318" aria-hidden="true">
+                <strong>Qiskit Fall Fest</strong><span>Campus.Guest</span>
+              </div>
+
+              <div class="vm-tag" style="--x:606; --y:204" aria-hidden="true">Mensa</div>
+              <div class="vm-tag" style="--x:1385; --y:565" aria-hidden="true">Audimax</div>
+            </div>
+          </div>
+          <p class="vm-hint" aria-hidden="true">Swipe to see the whole map</p>
+
+          <figcaption class="vm-caption">
+            <ol class="vm-steps">
+              <li>Take the S-Bahn to <strong>Universität</strong>.</li>
+              <li><strong>Main exit</strong> (glass rotunda): walk east across the square, past the Audimax and the Computer Science building, to the end of the small loop road.</li>
+              <li><strong>Exit Universitätsstraße</strong>: walk along Universitätsstraße and turn left into the loop road.</li>
+              <li>At the <strong>iron sculpture</strong>, follow the Qiskit Fall Fest signs to Campus.Guest.</li>
+            </ol>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article id="location-ibm" class="location-block">
+        <div class="location-info">
+          <div class="location-head">
+            <p class="location-eyebrow">Day 3</p>
+            <h3 class="location-title">IBM Innovation Studio, Ehningen</h3>
+            <p class="location-meta">Wed 11 November &middot; Registration opens at 10:00</p>
+            <address class="location-address">IBM Campus 1, 71139 Ehningen</address>
+            <div class="location-buttons">
+              <a class="btn btn-secondary"
+                href="https://www.google.com/maps/search/?api=1&amp;query=IBM%20Innovation%20Studio%2C%20IBM%20Campus%201%2C%2071139%20Ehningen"
+                target="_blank" rel="noopener">Google Maps</a>
+              <a class="btn btn-secondary"
+                href="https://maps.apple.com/?q=IBM%20Innovation%20Studio%2C%20IBM%20Campus%201%2C%2071139%20Ehningen"
+                target="_blank" rel="noopener">Apple Maps</a>
+            </div>
+          </div>
+          <div class="location-text">
+            <p>Please travel to Ehningen on your own by public transport. Take the S1 towards Herrenberg to Ehningen
+              (about 30 minutes from Stuttgart Hauptbahnhof). From Ehningen station, take bus 752 towards Mauren to the
+              stop "IBM Campus Ehningen" (about 10 minutes), or walk about 1.2 km (around 15 minutes). The schedule for
+              this day is still tentative.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
     <!-- Software Requirements for Keynotes and Workshops -->
   <section id="softwarerequirements" class="container textsection">
     <div class="division"></div>
