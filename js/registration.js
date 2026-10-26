@@ -20,16 +20,11 @@ if (REGISTRATION_OPEN) {
     el.hidden = el.dataset.registration !== "open";
   });
 
-  // Floating button: always reachable while scrolling, but hidden while the
-  // hero button itself is on screen so the two never show at the same time.
+  // Floating button: stays in the bottom-right corner while scrolling
   const floatingButton = document.getElementById("registration-float");
 
   floatingButton.href = REGISTRATION_URL;
   floatingButton.target = "_blank";
   floatingButton.rel = "noopener";
   floatingButton.hidden = false;
-
-  new IntersectionObserver(([entry]) => {
-    floatingButton.classList.toggle("is-visible", !entry.isIntersecting);
-  }).observe(registrationButton);
 }

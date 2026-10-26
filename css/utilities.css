@@ -109,20 +109,10 @@ h2::selection {
   bottom: calc(1.5rem + env(safe-area-inset-bottom));
   z-index: 15;
   margin: 0;
-  padding: 1.1rem 2.6rem;
-  font-size: 1.05rem;
+  padding: 1.4rem 3.4rem;
+  font-size: 1.3rem;
   font-weight: var(--weight-bold);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(1rem);
-  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
-}
-
-.registration-float.is-visible {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
 }
 
 .registration-float:hover,
