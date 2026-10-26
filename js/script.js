@@ -18,13 +18,19 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-// On narrow screens, start the scrollable campus map with pin, routes and venue in view
+// On narrow screens, start the scrollable campus map at x = 1100 of the 2576px image:
+// both S-Bahn exits, both routes, the pin and the venue are then in view
 const mapScroller = document.querySelector(".vm-scroller");
 
-if (mapScroller) {
+function centreMap() {
   const mapCanvas = mapScroller.firstElementChild;
 
   if (mapCanvas.offsetWidth > mapScroller.clientWidth) {
-    mapScroller.scrollLeft = mapCanvas.offsetWidth * (2470 / 2576) - mapScroller.clientWidth;
+    mapScroller.scrollLeft = mapCanvas.offsetWidth * (1100 / 2576);
   }
+}
+
+if (mapScroller) {
+  centreMap();
+  window.addEventListener("orientationchange", () => setTimeout(centreMap, 300));
 }

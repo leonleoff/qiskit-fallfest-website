@@ -388,7 +388,7 @@
                 class="vm-image"
                 src="assets/2026/map/campus-map-1400.webp"
                 srcset="assets/2026/map/campus-map-1400.webp 1400w, assets/2026/map/campus-map-2576.webp 2576w"
-                sizes="(max-width: 760px) 900px, (max-width: 1400px) 100vw, 1300px"
+                sizes="(max-width: 760px) 180vw, (max-width: 1400px) 100vw, 1300px"
                 width="2576" height="961" loading="lazy" decoding="async"
                 alt="Illustrated map of Campus Vaihingen. Walking routes lead from both exits of the S-Bahn station Universität to an iron sculpture at the end of a small loop road off Universitätsstraße. The venue Campus.Guest, highlighted in pink, is right next to it.">
 
@@ -399,34 +399,40 @@
                   <path class="vm-route__line"   d="M1300 395 L1380 412 L1500 424 L1640 428 L1722 424 L1745 405 L1772 388 L1812 381 L1856 387 L1890 402 L1922 404 L1960 402"/>
                 </g>
                 <g class="vm-route">
-                  <path class="vm-route__casing" d="M1540 912 L1610 896 L1760 856 L1900 818 L1990 790 L2034 768 L2038 735 L2020 688 L1995 642 L1962 585 L1928 528 L1900 480 L1904 444 L1928 418 L1960 402"/>
-                  <path class="vm-route__line"   d="M1540 912 L1610 896 L1760 856 L1900 818 L1990 790 L2034 768 L2038 735 L2020 688 L1995 642 L1962 585 L1928 528 L1900 480 L1904 444 L1928 418 L1960 402"/>
+                  <path class="vm-route__casing" d="M1540 896 L1610 884 L1760 856 L1900 818 L1990 790 L2034 768 L2038 735 L2020 688 L1995 642 L1962 585 L1928 528 L1900 480 L1904 444 L1928 418 L1960 402"/>
+                  <path class="vm-route__line"   d="M1540 896 L1610 884 L1760 856 L1900 818 L1990 790 L2034 768 L2038 735 L2020 688 L1995 642 L1962 585 L1928 528 L1900 480 L1904 444 L1928 418 L1960 402"/>
                 </g>
 
                 <!-- S-Bahn exits -->
                 <g class="vm-sbahn" transform="translate(1261 356)">
-                  <circle r="42"/>
-                  <image href="assets/2026/map/s-bahn.png" x="-36" y="-36" width="72" height="72"/>
+                  <g class="vm-sbahn__icon">
+                    <circle r="42"/>
+                    <image href="assets/2026/map/s-bahn.png" x="-36" y="-36" width="72" height="72"/>
+                  </g>
                 </g>
-                <g class="vm-sbahn" transform="translate(1540 912)">
-                  <circle r="42"/>
-                  <image href="assets/2026/map/s-bahn.png" x="-36" y="-36" width="72" height="72"/>
+                <g class="vm-sbahn" transform="translate(1540 896)">
+                  <g class="vm-sbahn__icon">
+                    <circle r="42"/>
+                    <image href="assets/2026/map/s-bahn.png" x="-36" y="-36" width="72" height="72"/>
+                  </g>
                 </g>
 
                 <!-- start of signage: iron sculpture -->
                 <g class="vm-pin" transform="translate(1960 402)">
                   <ellipse class="vm-pin__pulse" rx="34" ry="14"/>
-                  <ellipse class="vm-pin__shadow" rx="16" ry="6"/>
-                  <path class="vm-pin__body" d="M0 0 C-8 -18 -30 -34 -30 -60 A30 30 0 1 1 30 -60 C30 -34 8 -18 0 0 Z"/>
-                  <circle class="vm-pin__dot" cy="-60" r="11"/>
+                  <g class="vm-pin__icon">
+                    <ellipse class="vm-pin__shadow" rx="16" ry="6"/>
+                    <path class="vm-pin__body" d="M0 0 C-8 -18 -30 -34 -30 -60 A30 30 0 1 1 30 -60 C30 -34 8 -18 0 0 Z"/>
+                    <circle class="vm-pin__dot" cy="-60" r="11"/>
+                  </g>
                 </g>
               </svg>
 
               <!-- labels: --x / --y are pixel positions on the 2576 x 961 image -->
-              <div class="vm-label vm-label--left" style="--x:1208; --y:356" aria-hidden="true">
+              <div class="vm-label vm-label--sbahn vm-label--left" style="--x:1208; --y:356" aria-hidden="true">
                 <strong>S-Bahn Universität</strong><span>Main exit</span>
               </div>
-              <div class="vm-label vm-label--left" style="--x:1488; --y:912" aria-hidden="true">
+              <div class="vm-label vm-label--sbahn vm-label--left" style="--x:1488; --y:896" aria-hidden="true">
                 <strong>S-Bahn Universität</strong><span>Exit Universitätsstraße</span>
               </div>
               <div class="vm-label vm-label--start vm-label--above-left" style="--x:1930; --y:352" aria-hidden="true">
