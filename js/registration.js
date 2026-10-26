@@ -1,6 +1,6 @@
 // Registration switch.
 // To open registration, set REGISTRATION_OPEN to true, commit and push.
-// The hero button then links to the Tally form (new tab) and the
+// The hero button and the floating button then link to the Tally form (new tab) and the
 // "Registration opens ..." texts are swapped for "Registration is open!".
 // While it is false the page looks exactly like before and the form is unreachable.
 const REGISTRATION_OPEN = true;
@@ -19,4 +19,12 @@ if (REGISTRATION_OPEN) {
   document.querySelectorAll("[data-registration]").forEach((el) => {
     el.hidden = el.dataset.registration !== "open";
   });
+
+  // Floating button: stays in the bottom-right corner while scrolling
+  const floatingButton = document.getElementById("registration-float");
+
+  floatingButton.href = REGISTRATION_URL;
+  floatingButton.target = "_blank";
+  floatingButton.rel = "noopener";
+  floatingButton.hidden = false;
 }
