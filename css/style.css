@@ -1118,6 +1118,10 @@ body,
   border-left: 2px solid rgba(255, 126, 182, 0.35);
 }
 
+.panelists + .speaker-info {
+  margin-top: 0.75rem;
+}
+
 .time {
   font-family: var(--font-mono);
   font-weight: 500;
