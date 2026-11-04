@@ -475,10 +475,66 @@
               <li>Take the S-Bahn to <strong>Universität</strong>.</li>
               <li><strong>Main exit</strong> (glass rotunda): walk east across the square, past the Audimax and the Computer Science building, to the end of the small loop road.</li>
               <li><strong>Exit Universitätsstraße</strong>: walk along Universitätsstraße and turn left into the loop road.</li>
-              <li>At the <strong>iron sculpture</strong>, follow the Qiskit Fall Fest signs to Campus.Guest.</li>
+              <li>At the <strong>iron sculpture</strong>, follow the Qiskit Fall Fest signs to Campus.Guest, or use the
+                <a href="#walk-detail">detailed route to Room 101</a> below.</li>
             </ol>
           </figcaption>
         </figure>
+
+        <!-- Detail map: from the iron sculpture to Room 101. Room and sculpture are part of the image. Overlay coordinates use the 1024 x 572 pixel grid of the image -->
+        <section id="walk-detail" class="walk-detail" aria-labelledby="walk-detail-title">
+          <div class="walk-detail__head">
+            <p class="location-eyebrow">Last 200 metres</p>
+            <h4 id="walk-detail-title" class="walk-detail__title">From the sculpture to Room 101</h4>
+            <p class="walk-detail__legend" aria-hidden="true">
+              <span class="walk-key walk-key--out"></span>outside
+              <span class="walk-key walk-key--in"></span>through the building
+            </p>
+          </div>
+
+          <figure class="vm-figure vm-figure--detail">
+            <div class="vm-scroller" tabindex="0" data-map-start="0.14" aria-label="Detail map, scroll sideways on small screens">
+              <div class="vm-canvas">
+                <img
+                  class="vm-image"
+                  src="assets/2026/map/detail/detail-map-1024.webp"
+                  width="1024" height="572" loading="lazy" decoding="async"
+                  alt="Illustrated close-up of the buildings around Campus.Guest. The route starts at the iron sculpture, goes through the glass entrance and the building behind it, back outside past a glass pavilion, and along a covered glass walkway to Room 101, highlighted in pink.">
+
+                <svg class="vm-overlay" viewBox="0 0 1024 572" aria-hidden="true" focusable="false">
+                  <!-- outside: from the sculpture to the glass entrance -->
+                  <g class="vm-route">
+                    <path class="vm-route__casing" d="M188 408 L289.7 270.3 Q298 259 307.3 248.5"/>
+                    <path class="vm-route__line"   d="M188 408 L289.7 270.3 Q298 259 307.3 248.5"/>
+                  </g>
+                  <!-- inside: past the reception and straight through the building -->
+                  <g class="vm-route vm-route--indoor">
+                    <path class="vm-route__casing" d="M307.3 248.5 L315.4 239.4 Q322 232 331.9 230.6 L504.1 206.9 Q518 205 532 205.9"/>
+                    <path class="vm-route__line"   d="M307.3 248.5 L315.4 239.4 Q322 232 331.9 230.6 L504.1 206.9 Q518 205 532 205.9"/>
+                  </g>
+                  <!-- outside: a few steps right, down the slope, then along the wing to the glass walkway -->
+                  <g class="vm-route">
+                    <path class="vm-route__casing" d="M532 205.9 L541.9 206.5 Q550 207 551 215.1 L556.3 260.1 Q558 274 571.9 272.3 L739 251.6 L757 249.4"/>
+                    <path class="vm-route__line"   d="M532 205.9 L541.9 206.5 Q550 207 551 215.1 L556.3 260.1 Q558 274 571.9 272.3 L739 251.6 L757 249.4"/>
+                  </g>
+                  <!-- inside: through the glass walkway, then right into the room -->
+                  <g class="vm-route vm-route--indoor">
+                    <path class="vm-route__casing" d="M757 249.4 L763 248.6 Q768 248 768.9 252.9 L781.5 322.2 Q784 336 770.4 339.2 L742 346"/>
+                    <path class="vm-route__line"   d="M757 249.4 L763 248.6 Q768 248 768.9 252.9 L781.5 322.2 Q784 336 770.4 339.2 L742 346"/>
+                  </g>
+                </svg>
+
+                <div class="vm-label vm-label--start vm-label--below" style="--x:272; --y:446" aria-hidden="true">
+                  <strong>Iron sculpture</strong><span>Start here</span>
+                </div>
+                <div class="vm-label vm-label--venue vm-label--below" style="--x:708; --y:376" aria-hidden="true">
+                  <strong>Room 101</strong><span>Campus.Guest</span>
+                </div>
+              </div>
+            </div>
+            <p class="vm-hint" aria-hidden="true">Swipe to see the whole map</p>
+          </figure>
+        </section>
       </article>
 
       <article id="location-ibm" class="location-block">

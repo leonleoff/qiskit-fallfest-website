@@ -1400,6 +1400,8 @@ section[id] {
   --vm-pill: rgba(16, 16, 22, 0.86);
   --vm-pill-border: rgba(255, 255, 255, 0.14);
   --vm-label-size: clamp(11px, 1.05vw, 15px);
+  --vm-w: 2576;   /* pixel grid of the map image, used to place labels */
+  --vm-h: 961;
   margin: 1.5rem 0 0;
 }
 .vm-sbahn__icon, .vm-pin__icon { transform-box: fill-box; }
@@ -1451,8 +1453,8 @@ section[id] {
 /* labels are HTML so the text stays crisp and readable at every size */
 .vm-label, .vm-tag {
   position: absolute;
-  left: calc(var(--x) / 2576 * 100%);
-  top: calc(var(--y) / 961 * 100%);
+  left: calc(var(--x) / var(--vm-w) * 100%);
+  top: calc(var(--y) / var(--vm-h) * 100%);
   line-height: 1.2;
   white-space: nowrap;
   pointer-events: none;
@@ -1506,6 +1508,79 @@ section[id] {
   .vm-route__casing { stroke-width: 28; }
   .vm-route__line { stroke-width: 15; }
   .vm-sbahn__icon, .vm-pin__icon { transform: scale(1.5); }
+}
+
+/* Detail map: from the iron sculpture to Room 101, same map component on a 1024 x 572 grid */
+.walk-detail {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-soft);
+  scroll-margin-top: 100px;
+}
+.walk-detail__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+.walk-detail__title {
+  margin: 0.25rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+.walk-detail__legend {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+}
+.walk-key {
+  display: inline-block;
+  width: 28px;
+  height: 0;
+  border-top: 4px dotted var(--pill-pink);
+}
+.walk-key--in { margin-left: 0.6rem; border-top: 3px dashed #fff; }
+
+.vm-figure--detail {
+  --vm-w: 1024;
+  --vm-h: 572;
+  margin-top: 1rem;
+}
+.vm-figure--detail .vm-route__casing { stroke-width: 10; }
+.vm-figure--detail .vm-route__line {
+  stroke-width: 5;
+  stroke-dasharray: 1 10;
+  animation-name: vm-walk-detail;
+}
+@keyframes vm-walk-detail { to { stroke-dashoffset: -11; } }
+
+/* inside a building: white dashes on a light casing */
+.vm-route--indoor .vm-route__casing { stroke: rgba(10, 10, 14, 0.45); }
+.vm-figure--detail .vm-route--indoor .vm-route__line {
+  stroke: #fff;
+  stroke-width: 3.2;
+  stroke-linecap: butt;
+  stroke-dasharray: 8 6;
+  animation-name: vm-walk-indoor;
+}
+@keyframes vm-walk-indoor { to { stroke-dashoffset: -14; } }
+
+
+.vm-label--below { transform: translate(-50%, 12px); }
+.vm-label--right { transform: translate(0, -50%); }
+.vm-label--venue.vm-label--below::after {
+  top: -7px; bottom: auto;
+  border: 8px solid transparent; border-top: 0; border-bottom-color: var(--vm-accent);
+}
+
+@media (max-width: 760px) {
+  .vm-figure--detail .vm-canvas { width: 150%; }
+  .vm-figure--detail .vm-route__casing { stroke-width: 14; }
+  .vm-figure--detail .vm-route__line { stroke-width: 6.5; }
+  .vm-figure--detail .vm-route--indoor .vm-route__line { stroke-width: 5; }
 }
 
 /* highlight a location block when someone jumps to it from the schedule;
