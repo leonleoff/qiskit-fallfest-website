@@ -1568,6 +1568,15 @@ section[id] {
 }
 @keyframes vm-walk-indoor { to { stroke-dashoffset: -14; } }
 
+/* arrowheads: into the entrance and into the room */
+.vm-arrow {
+  fill: var(--vm-accent);
+  stroke: rgba(10, 10, 14, 0.75);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+
 
 .vm-label--below { transform: translate(-50%, 12px); }
 .vm-label--right { transform: translate(0, -50%); }
