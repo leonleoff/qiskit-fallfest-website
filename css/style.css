@@ -1601,6 +1601,8 @@ section[id] {
 /* highlight a location block when someone jumps to it from the schedule;
    100px clears the fixed navbar like the organiser cards above */
 #location-campus, #location-ibm { scroll-margin-top: 100px; }
+/* same flash on the detail map when someone follows a Room 101 link */
+.walk-detail:target .vm-scroller { animation: location-flash 1.8s ease-out 1; }
 #location-campus:target, #location-ibm:target { animation: location-flash 1.8s ease-out 1; }
 @keyframes location-flash {
   25% { box-shadow: 0 0 0 4px var(--vm-accent), 0 18px 40px rgba(0, 0, 0, 0.28); }
@@ -1610,4 +1612,5 @@ section[id] {
   .vm-route__line, .vm-pin__pulse { animation: none; }
   .vm-pin__pulse { opacity: 0; }
   #location-campus:target, #location-ibm:target { animation: none; }
+  .walk-detail:target .vm-scroller { animation: none; }
 }
