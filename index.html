@@ -168,7 +168,13 @@
           </div>
           <p class="day-location">University of Stuttgart, Vaihingen</p>
           <ul>
-            <li><span class="time">09:00</span> Registration &amp; Welcome</li>
+            <li>
+              <span class="time">09:00</span>
+              <div class="event-details">
+                <div class="event-title">Registration &amp; Welcome</div>
+                <div class="speaker-info"><a class="section-link" href="#walk-detail">Room 101, Campus.Guest &middot; how to get there</a></div>
+              </div>
+            </li>
             <li><span class="time">09:30</span> Opening & Information</li>
             <li>
               <span class="time">10:00</span>
@@ -260,7 +266,13 @@
           </div>
           <p class="day-location">University of Stuttgart, Vaihingen</p>
           <ul>
-            <li><span class="time">09:00</span> Registration &amp; Welcome</li>
+            <li>
+              <span class="time">09:00</span>
+              <div class="event-details">
+                <div class="event-title">Registration &amp; Welcome</div>
+                <div class="speaker-info"><a class="section-link" href="#walk-detail">Room 101, Campus.Guest &middot; how to get there</a></div>
+              </div>
+            </li>
             <li>
               <span class="time">09:30</span>
               <div class="event-details">
@@ -330,37 +342,38 @@
           </div>
           <p class="day-location">IBM Innovation Studio, Ehningen</p>
           <ul>
-            <li><span class="time">10:00</span> Registration &amp; Welcome</li>
+            <li><span class="time">09:00</span> Registration &amp; Welcome</li>
             <li>
-              <span class="time">10:30</span>
+              <span class="time">09:15</span>
               <div class="event-details">
                 <div class="event-title">Session by IBM</div>
                 <div class="speaker-info"><a href="https://www.linkedin.com/in/janlahmann/" target="_blank" rel="noopener">Dr. Jan-Rainer Lahmann</a> — IBM Distinguished Engineer and Worldwide IBM Quantum Ambassador Lead</div>
               </div>
             </li>
             <li>
-              <span class="time">11:15</span>
+              <span class="time">09:45</span>
               <div class="event-details">
                 <div class="event-title">Hackathon award ceremony</div>
                 <div class="speaker-info">Presented by <a href="https://www.linkedin.com/in/dfaller/" target="_blank" rel="noopener">David Faller</a> and <a href="https://www.linkedin.com/in/janlahmann/" target="_blank" rel="noopener">Dr. Jan-Rainer Lahmann</a></div>
               </div>
             </li>
-            <li><span class="time">11:45</span> Lunch break</li>
+            <li><span class="time">10:15</span> Official closing</li>
             <li>
-              <span class="time">12:45</span>
+              <span class="time">10:30</span>
               <div class="event-details">
-                <div class="event-title">Tours at IBM</div>
-                <div class="speaker-info">Until 15:00 &ndash; two groups, both tours run in parallel, then the groups
-                  swap</div>
+                <div class="event-title">Tours &amp; mini hackathon at IBM</div>
+                <div class="speaker-info">Three groups rotate through all three stations, 50 minutes each (10:30, 11:20,
+                  12:10)</div>
                 <div class="panelists">
                   <div class="speaker-info">IBM Innovation Studio tour</div>
                   <div class="speaker-info">IBM Quantum Showroom tour &ndash; see a real IBM quantum computer &ndash;
                     behind glass, but the real thing!</div>
+                  <div class="speaker-info"><a href="https://bob.ibm.com/" target="_blank" rel="noopener">IBM Bob</a> mini hackathon</div>
                 </div>
               </div>
             </li>
-            <li><span class="time">15:00</span> Closing ceremony</li>
-            <li><em>This day's schedule is still tentative</em></li>
+            <li><span class="time">13:00</span> End</li>
+            <li><em>Provisional: this day's schedule may still change</em></li>
           </ul>
           <a class="day-location-link" href="#location-ibm">Location for this day <span aria-hidden="true">&rarr;</span></a>
         </div>
@@ -382,7 +395,7 @@
           <div class="location-head">
             <p class="location-eyebrow">Days 1 and 2</p>
             <h3 class="location-title">Campus.Guest, University of Stuttgart</h3>
-            <p class="location-meta">Mon 9 and Tue 10 November &middot; Registration opens at 09:00</p>
+            <p class="location-meta">Mon 9 and Tue 10 November &middot; Registration opens at 09:00 in <a href="#walk-detail">Room 101</a></p>
             <address class="location-address">Universitätsstraße 28-34, 70569 Stuttgart (Campus Vaihingen)</address>
             <div class="location-buttons">
               <a class="btn btn-secondary"
@@ -475,10 +488,70 @@
               <li>Take the S-Bahn to <strong>Universität</strong>.</li>
               <li><strong>Main exit</strong> (glass rotunda): walk east across the square, past the Audimax and the Computer Science building, to the end of the small loop road.</li>
               <li><strong>Exit Universitätsstraße</strong>: walk along Universitätsstraße and turn left into the loop road.</li>
-              <li>At the <strong>iron sculpture</strong>, follow the Qiskit Fall Fest signs to Campus.Guest.</li>
+              <li>At the <strong>iron sculpture</strong>, follow the Qiskit Fall Fest signs to Campus.Guest, or use the
+                <a href="#walk-detail">detailed route to Room 101</a> below.</li>
             </ol>
           </figcaption>
         </figure>
+
+        <!-- Detail map: from the iron sculpture to Room 101. Room and sculpture are part of the image. Overlay coordinates use the 1024 x 572 pixel grid of the image -->
+        <section id="walk-detail" class="walk-detail" aria-labelledby="walk-detail-title">
+          <div class="walk-detail__head">
+            <p class="location-eyebrow">The last 314 metres</p>
+            <h4 id="walk-detail-title" class="walk-detail__title">From the sculpture to Room 101</h4>
+            <p class="walk-detail__legend" aria-hidden="true">
+              <span class="walk-key walk-key--out"></span>outside
+              <span class="walk-key walk-key--in"></span>through the building
+            </p>
+          </div>
+          <p class="walk-detail__note">The whole way is signposted: from the iron sculpture, just follow the Qiskit Fall Fest signs.</p>
+
+          <figure class="vm-figure vm-figure--detail">
+            <div class="vm-scroller" tabindex="0" data-map-start="0.14" aria-label="Detail map, scroll sideways on small screens">
+              <div class="vm-canvas">
+                <img
+                  class="vm-image"
+                  src="assets/2026/map/detail/detail-map-1024.webp"
+                  width="1024" height="572" loading="lazy" decoding="async"
+                  alt="Illustrated close-up of the buildings around Campus.Guest. The route starts at the iron sculpture, goes through the glass entrance and the building behind it, back outside past a glass pavilion, and along a covered glass walkway to Room 101, highlighted in pink.">
+
+                <svg class="vm-overlay" viewBox="0 0 1024 572" aria-hidden="true" focusable="false">
+                  <!-- outside: from the sculpture straight to the glass entrance -->
+                  <g class="vm-route">
+                    <path class="vm-route__casing" d="M175 425 L281 300.4"/>
+                    <path class="vm-route__line"   d="M175 425 L281 300.4"/>
+                  </g>
+                  <!-- inside: past the reception and straight through the building -->
+                  <g class="vm-route vm-route--indoor">
+                    <path class="vm-route__casing" d="M310 246 L316.6 238.8 Q322 233 329.9 231.9 L506.8 207.5 Q518 206 529.2 205.6"/>
+                    <path class="vm-route__line"   d="M310 246 L316.6 238.8 Q322 233 329.9 231.9 L506.8 207.5 Q518 206 529.2 205.6"/>
+                  </g>
+                  <!-- outside: out, down the slope, then along the wing to the glass walkway -->
+                  <g class="vm-route">
+                    <path class="vm-route__casing" d="M529.2 205.6 L536.8 205.2 Q543 205 544.3 211 L555 259.3 Q558 273 571.9 271.3 L739.9 250.3 L756.1 248.2"/>
+                    <path class="vm-route__line"   d="M529.2 205.6 L536.8 205.2 Q543 205 544.3 211 L555 259.3 Q558 273 571.9 271.3 L739.9 250.3 L756.1 248.2"/>
+                  </g>
+                  <!-- inside: through the glass walkway, then right into the room -->
+                  <g class="vm-route vm-route--indoor">
+                    <path class="vm-route__casing" d="M756.1 248.2 L761.5 247.6 Q766 247 766.6 251.4 L777.1 326.1 Q779 340 765.2 342.1 L744 345.3"/>
+                    <path class="vm-route__line"   d="M756.1 248.2 L761.5 247.6 Q766 247 766.6 251.4 L777.1 326.1 Q779 340 765.2 342.1 L744 345.3"/>
+                  </g>
+                  <!-- arrows: into the entrance, into the room -->
+                  <polygon class="vm-arrow" points="288,292 285.3,305.4 275.3,297.1"/>
+                  <polygon class="vm-arrow" points="733,347 743.9,338.7 745.9,351.6"/>
+                </svg>
+
+                <div class="vm-label vm-label--start vm-label--below" style="--x:272; --y:446" aria-hidden="true">
+                  <strong>Iron sculpture</strong><span>Start here</span>
+                </div>
+                <div class="vm-label vm-label--venue vm-label--below" style="--x:708; --y:376" aria-hidden="true">
+                  <strong>Room 101</strong><span>Campus.Guest</span>
+                </div>
+              </div>
+            </div>
+            <p class="vm-hint" aria-hidden="true">Swipe to see the whole map</p>
+          </figure>
+        </section>
       </article>
 
       <article id="location-ibm" class="location-block">
@@ -486,7 +559,7 @@
           <div class="location-head">
             <p class="location-eyebrow">Day 3</p>
             <h3 class="location-title">IBM Innovation Studio, Ehningen</h3>
-            <p class="location-meta">Wed 11 November &middot; Registration opens at 10:00</p>
+            <p class="location-meta">Wed 11 November &middot; Registration opens at 09:00 (provisional)</p>
             <address class="location-address">IBM Campus 1, 71139 Ehningen</address>
             <div class="location-buttons">
               <a class="btn btn-secondary"
@@ -501,7 +574,7 @@
             <p>Please travel to Ehningen on your own by public transport. Take the S1 towards Herrenberg to Ehningen
               (about 30 minutes from Stuttgart Hauptbahnhof). From Ehningen station, take bus 752 towards Mauren to the
               stop "IBM Campus Ehningen" (about 10 minutes), or walk about 1.2 km (around 15 minutes). The schedule for
-              this day is still tentative.</p>
+              this day is provisional and may still change.</p>
           </div>
         </div>
       </article>
