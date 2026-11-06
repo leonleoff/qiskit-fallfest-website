@@ -1614,3 +1614,78 @@ section[id] {
   #location-campus:target, #location-ibm:target { animation: none; }
   .walk-detail:target .vm-scroller { animation: none; }
 }
+
+/* Links in the location notes (the global reset strips their underline) */
+.location-text p a {
+  color: var(--pill-pink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.location-text p a:hover {
+  color: var(--pill-purple);
+}
+
+/* Lab Tours (Day 1): meeting point per site, details in the PDF */
+#labtours .content-text h3 {
+  margin-top: 2rem;
+}
+
+/* A left-aligned block, centred as a whole inside the centred section */
+.tour-meet-list {
+  max-width: 700px;
+  margin: 0.75rem auto 1.5rem;
+  padding: 0 0.5rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.tour-meet-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.tour-meet-list li:first-child {
+  border-top: 1px solid var(--border-soft);
+}
+
+.tour-meet-site {
+  font-weight: var(--weight-semibold);
+  font-size: 1.05rem;
+  color: var(--text-color);
+}
+
+.tour-meet-site a:hover {
+  color: var(--pill-pink);
+}
+
+.tour-meet-code {
+  margin-left: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--pill-pink);
+}
+
+.tour-meet-spot {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.tour-meet-spot a {
+  color: var(--pill-pink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tour-meet-spot a:hover {
+  color: var(--pill-purple);
+}
+
+#labtours .location-buttons {
+  justify-content: center;
+}
