@@ -1689,3 +1689,28 @@ section[id] {
 #labtours .location-buttons {
   justify-content: center;
 }
+
+/* Hackathon: one card per prompt, buttons aligned along the bottom */
+.hackathon-tracks {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hackathon-tracks .location-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.hackathon-tracks .location-text {
+  margin-top: 0.75rem;
+}
+
+.hackathon-tracks .location-buttons {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .hackathon-tracks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

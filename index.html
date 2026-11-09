@@ -310,8 +310,9 @@
             <li>
               <span class="time">13:30</span>
               <div class="event-details">
-                <div class="event-title">Beginner hackathon prompt</div>
-                <div class="speaker-info">Title to be announced &ndash; <a href="#aboutus">organizing team</a></div>
+                <div class="event-title">Hackathon prompt: Herding Quantum Cats</div>
+                <div class="speaker-info">Beginner/intermediate level</div>
+                <div class="speaker-info"><a href="#team-afonso">Afonso Azenha</a> — PhD Student, <abbr title="Hardware Oriented Computer Science group, Institute of Computer Architecture and Computer Engineering">ITI-HOCOS</abbr>, University of Stuttgart</div>
               </div>
             </li>
             <li>
@@ -644,12 +645,52 @@
     <div class="division"></div>
     <div class="content-text">
       <h2>Hackathon</h2>
-      <p>There will be two hackathon prompts, one for each experience level. More details will be announced closer to the
-        event.</p>
-      <p><strong>Beginner prompt:</strong> to be announced, presented by the Qiskit Fall Fest organizing team.</p>
-      <p><strong>Intermediate/advanced prompt:</strong> Quantum Simulation of Nuclear Magnetic Resonance Spectroscopy,
-        provided by HQS Quantum Simulations and presented by
-        <a href="https://www.linkedin.com/in/andisheh-khedri-740409176/" target="_blank" rel="noopener">Dr. Andisheh Khedri</a>.</p>
+      <p>There are two hackathon prompts, one for each experience level. Each one has its own GitHub repository with
+        everything you need.</p>
+    </div>
+
+    <div class="location-blocks hackathon-tracks">
+      <article class="location-block">
+        <p class="location-eyebrow">Beginner/intermediate</p>
+        <h3 class="location-title">Herding Quantum Cats</h3>
+        <p class="location-meta">By the Qiskit Fall Fest organizing team</p>
+        <div class="location-text">
+          <p>Build the cleanest and the biggest GHZ (&ldquo;cat&rdquo;) state you can on an IBM Heron processor, first on a
+            realistic simulator and then on the real ibm_kingston. A notebook of missions takes you from your first cat to
+            choosing good qubits, shortening circuits and reducing errors.</p>
+          <p><strong>Two leaderboards:</strong> <em>Cleanest Cat</em>, the highest fidelity for a cat of exactly 12 qubits,
+            and <em>Biggest Cat</em>, the largest cat you can certify as genuinely entangled.</p>
+          <p class="location-note"><strong>Before the event:</strong> install Python and the required packages, and create
+            a free IBM Quantum account with an API key. The steps are in the repository's README.</p>
+          <p class="location-note"><strong>Deadlines:</strong> final hardware jobs by 18:45. Your notebook, results file and
+            a 5-minute pitch deck by 20:00.</p>
+        </div>
+        <div class="location-buttons">
+          <!-- Wired up by js/hackathon.js; stays disabled until HACKATHON_REPOS_OPEN is true -->
+          <a class="btn btn-secondary btn-disabled" aria-disabled="true"
+            data-repo-url="https://github.com/kaiuki2000/herding-cats/tree/main"
+            aria-label="Beginner/intermediate hackathon repository on GitHub">Repository available soon</a>
+        </div>
+      </article>
+
+      <article class="location-block">
+        <p class="location-eyebrow">Intermediate/advanced</p>
+        <h3 class="location-title">Quantum Simulation of Nuclear Magnetic Resonance Spectroscopy</h3>
+        <p class="location-meta">Provided by HQS Quantum Simulations</p>
+        <div class="location-text">
+          <p>You are given three molecules and three NMR spectra, and your task is to work out which spectrum belongs to which
+            molecule. You complete a Qiskit notebook that simulates each molecule's spectrum with Trotterized time evolution,
+            then explore how much noise the spectra can tolerate.</p>
+          <p>Presented by <a href="https://www.linkedin.com/in/andisheh-khedri-740409176/" target="_blank" rel="noopener">Dr. Andisheh Khedri</a>.</p>
+          <p class="location-note"><strong>Before the event:</strong> run the install cell at the top of <code>nmr.ipynb</code>
+            to get Qiskit 2.x, struqture_py, NumPy, SciPy and Matplotlib.</p>
+        </div>
+        <div class="location-buttons">
+          <a class="btn btn-secondary btn-disabled" aria-disabled="true"
+            data-repo-url="https://github.com/kbarkhqs/qiskit-fall-fest"
+            aria-label="Intermediate/advanced hackathon repository on GitHub">Repository available soon</a>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -857,6 +898,7 @@
 
   <script src="js/script.js"></script>
   <script src="js/registration.js"></script>
+  <script src="js/hackathon.js"></script>
 </body>
 
 </html>
