@@ -93,13 +93,13 @@
       </div>
 
       <div class="registration-notice">
-        <p><strong data-registration="closed">Registration opens in early October 2026.</strong><strong
+        <p><strong data-registration="closed">Registration is closed.</strong><strong
             data-registration="open" hidden>Registration is open!</strong></p>
         <p>The programme below is preliminary and not yet final.</p>
       </div>
       <!-- Wired up by js/registration.js; stays disabled until REGISTRATION_OPEN is true -->
-      <a id="registration-button" class="btn btn-secondary btn-disabled" aria-disabled="true">Registration opens soon</a>
-      <p class="registration-privacy">By registering you agree to our <a href="privacy/">privacy notice</a>.</p>
+      <a id="registration-button" class="btn btn-secondary btn-disabled" aria-disabled="true">Registration closed</a>
+      <p class="registration-privacy" data-registration="open" hidden>By registering you agree to our <a href="privacy/">privacy notice</a>.</p>
     </section>
   </header>
 
@@ -155,7 +155,7 @@
       <h2>Schedule</h2>
       <p>We offer a variety of talks, workshops, and hackathon challenges for <strong>students of all levels </strong> —
         from curious minds eager to explore quantum concepts, to beginners and those with intermediate experience. Check
-        out the schedule below &ndash; small changes may still happen. <span data-registration="closed">Registration opens in <strong>early October 2026</strong>.</span><span
+        out the schedule below &ndash; small changes may still happen. <span data-registration="closed">Registration is closed.</span><span
           data-registration="open" hidden>Registration is open!</span> We can't
         wait to see you there! </p>
       <p>Participants in the Qiskit Fall Fest will receive an IBM Quantum certificate.</p>
@@ -854,9 +854,6 @@
       <p class="past-editions">Past editions: <a href="/2025/">2025</a></p>
     </div>
   </footer>
-
-  <!-- Floating registration button; shown by js/registration.js while REGISTRATION_OPEN is true -->
-  <a id="registration-float" class="btn btn-secondary registration-float" hidden>Register now</a>
 
   <script src="js/script.js"></script>
   <script src="js/registration.js"></script>
